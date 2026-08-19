@@ -1,0 +1,61 @@
+# ============================================================
+# Secrets & environment
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+grafana_admin_password.txt
+
+# ============================================================
+# Python (generator/, webhook-sink/)
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+pip-log.txt
+
+# ============================================================
+# Docker
+# ============================================================
+# Local override files people create for their own machine
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ============================================================
+# Grafana / Prometheus runtime data
+# ============================================================
+# If you ever add persistent volumes mounted to local folders
+# instead of named Docker volumes, ignore their data:
+grafana/data/
+prometheus/data/
+alertmanager/data/
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+logs/
+
+# ============================================================
+# OS / editor noise
+# ============================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ============================================================
+# Generated / temp
+# ============================================================
+*.tmp
+*.bak
+dist/
+build/
