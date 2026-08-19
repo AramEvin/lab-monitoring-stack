@@ -1,0 +1,11 @@
+groups:
+  - name: soc-lab-alerts
+    rules:
+      - alert: HighIngestionLag
+        expr: soc_ingestion_lag_seconds > 0
+        for: 10s
+        labels:
+          severity: warning
+        annotations:
+          summary: "TEST: lag alert for {{ $labels.tenant }}"
+          description: "Lag is {{ $value }}s"
